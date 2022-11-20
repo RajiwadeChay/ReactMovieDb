@@ -318,6 +318,66 @@ main {
   transition: all 0.5s ease;
 }
 
+/*styling for deatils page*/
+main {
+  padding: 20px 0;
+}
+
+.detail-card {
+  padding: 20px 2%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #010A17;
+}
+
+.detail {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.card-info {
+  margin-left: 1%;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.movie-rating {
+  margin-bottom: 20px;
+  color: blue;
+  font-size: 20px;
+}
+
+.movie-info {
+  margin-bottom: 10px;
+}
+
+h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.cast-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.cast-list li {
+  margin: 0 0.5%;
+  flex-basis: 15%;
+}
+
+.cast-list p {
+  margin-top: 5px;
+}
+/*styling for deatils end*/
+
 /*=================================
   main styling ends here
 =================================*/
