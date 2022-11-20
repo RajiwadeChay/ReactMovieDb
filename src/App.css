@@ -324,8 +324,8 @@ main {
 }
 
 .detail-card {
-  padding: 20px 2%;
-  margin-bottom: 20px;
+  padding: 30px 2%;
+  margin-bottom: 40px;
   border-radius: 10px;
   background-color: #010A17;
 }
@@ -333,12 +333,18 @@ main {
 .detail {
   margin-bottom: 20px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  flex-direction: column;
   justify-content: flex-start;
 }
 
 .card-info {
-  margin-left: 1%;
+  margin-top: 10px;
+  margin-left: 0;
+}
+
+.overview {
+  padding: 0 5%;
 }
 
 h3 {
@@ -357,19 +363,20 @@ h3 {
 }
 
 h4 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 18px;
 }
 
 .cast-list {
   display: flex;
   align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
 
 .cast-list li {
-  margin: 0 0.5%;
+  margin-bottom: 40px;
   flex-basis: 15%;
 }
 
@@ -418,6 +425,38 @@ footer p {
   .movie-list li {
     flex-basis: 40%;
   }
+
+  footer .wrapper {
+    flex-direction: row;
+  }
+
+  footer p {
+    margin-bottom: 0;
+  }
+
+  /*styling for details page start*/
+  .detail {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  .card-info {
+    margin-top: 0;
+    margin-left: 1%;
+  }
+
+  .overview {
+    padding: 0;
+  }
+
+  .cast-list {
+    flex-direction: row;
+  }
+
+  .cast-list li {
+    margin: 0 0.5%;
+  }
+  /*styling for details page end*/
 }
 
 /*media query for 995px starts here*/
@@ -482,11 +521,14 @@ footer p {
     flex-basis: 20%;
   }
 
-  footer .wrapper {
-    flex-direction: row;
+  /*styling for details page start*/
+  .detail-card {
+    padding: 20px 2%;
+    margin-bottom: 20px;
   }
 
-  footer p {
-    margin-bottom: 0;
+  h4 {
+    margin-bottom: 10px;
   }
+  /*styling for details page end*/
 }  
