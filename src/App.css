@@ -105,12 +105,12 @@ li {
   position: relative;
 }
 
-header {
+.header {
   padding: 15px 0;
   background-color: #33393F;
 }
 
-header .wrapper {
+.header .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -283,7 +283,7 @@ nav a {
 /*=================================
   main styling starts here
 =================================*/
-main {
+.main {
   background-color: #272B33;
   color: #FFF;
 }
@@ -319,7 +319,7 @@ main {
 }
 
 /*styling for deatils page*/
-main {
+.main {
   padding: 20px 0;
 }
 
@@ -372,7 +372,7 @@ h4 {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .cast-list li {
@@ -380,7 +380,11 @@ h4 {
   flex-basis: 15%;
 }
 
-.cast-list p {
+.cast-list .cast-name {
+  margin-top: 10px;
+}
+
+.cast-list .character {
   margin-top: 5px;
 }
 /*styling for deatils end*/
@@ -392,20 +396,20 @@ h4 {
 /*=================================
   footer styling starts here
 =================================*/ 
-footer {
+.footer {
   padding: 15px 0;
   background-color: #33393F;
   color: #808487;
 }
 
-footer .wrapper {
+.footer .wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
 }
 
-footer p {
+.footer p {
   margin-bottom: 10px;
 }
 
@@ -426,11 +430,11 @@ footer p {
     flex-basis: 40%;
   }
 
-  footer .wrapper {
+  .footer .wrapper {
     flex-direction: row;
   }
 
-  footer p {
+  .footer p {
     margin-bottom: 0;
   }
 
