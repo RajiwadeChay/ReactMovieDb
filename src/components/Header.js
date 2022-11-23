@@ -1,20 +1,23 @@
+import { Navbar } from './Navbar';
+
 function Header() {
+
+    function activateHamburger() {
+
+    }
+
     return (
-        <div className="header">
+        <header>
             <div className="wrapper">
                 <h1>
                     <a href="/" title="Home Page">MovieDb</a>
                 </h1>
-                <div className="hamburger">
+                <div className="hamburger" onClick={activateHamburger} >
                     <span className="bar">bar</span>
                 </div>
-                <nav>
-                    <ul>
-                        <li><a href="/components/Popular">Popular</a></li>
-                        <li><a href="/components/TopRated">Top Rated</a></li>
-                        <li><a href="/components/Upcoming">Upcoming</a></li>
-                    </ul>
-                </nav>
+                <>
+                    <Navbar />
+                </>
                 <form className="search-form">
                     <div className='search-bar'>
                         <label htmlFor="searchBar"></label>
@@ -25,7 +28,7 @@ function Header() {
                     </div>
                 </form>
             </div>
-        </div>
+        </header>
     );
 }
 
