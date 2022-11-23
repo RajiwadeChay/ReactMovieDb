@@ -6,11 +6,11 @@ import TopRated from './components/TopRated';
 import Upcoming from './components/Upcoming';
 
 
-function ProjectRoute() {
+function ProjectRoute(props) {
     return (
         <main>
             <Routes>
-                <Route path='/' element={<PopularMovie />} />
+                <Route path='/' element={<PopularMovie movies={props.movies} />} />
                 <Route path='/toprated' element={<TopRated />} />
                 <Route path='/upcoming' element={<Upcoming />} />
                 <Route path='/movie-details/:id' element={<MovieDetails />} />

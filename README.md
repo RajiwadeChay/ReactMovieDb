@@ -1,3 +1,6 @@
+This my React assignment submission. I hav etried my best to complete it. But I was unable to implement pagination. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

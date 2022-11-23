@@ -2,17 +2,21 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const PopularMovie = () => {
-    const [movies, setMovies] = useState([]);
+const PopularMovie = (props) => {
+    const [movies, setMovies] = useState(props.movies);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        axios.get('https://api.themoviedb.org/3/movie/popular?api_key=4cbcac8a282c08aa737f254c9ba06df5&language=en-US&page=1')
-            .then(result => {
-                setTimeout(() => { setMovies(result.data.results); }, 200);
-            }).catch(error => { setError(error); });
-    }, []);
+        if (props.movies.length > 0) {
+            setMovies(props.movies);
+        } else {
+            axios.get('https://api.themoviedb.org/3/movie/popular?api_key=4cbcac8a282c08aa737f254c9ba06df5&language=en-US&page=1')
+                .then(result => {
+                    setTimeout(() => { setMovies(result.data.results); }, 200);
+                }).catch(error => { setError(error); });
+        }
+    }, [props]);
 
     if (error) {
         return <p className="error">Error: {error.message}</p>;
