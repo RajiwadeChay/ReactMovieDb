@@ -14,14 +14,14 @@ const MovieDetails = () => {
                 setTimeout(() => {
                     setDetails(result.data);
                 }, 500);
-            }).catch(err => { console.log(err); });
+            }).catch(err => { <div>Error: {err.message}</div> });
         axios.get(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=4cbcac8a282c08aa737f254c9ba06df5&language=en-US`)
             .then(result => {
                 setTimeout(() => {
                     setCasts(result.data.cast);
                     setLoading(false);
                 }, 500);
-            }).catch(err => { console.log(err); });
+            }).catch(err => { <div>Error: {err.message}</div> });
     }, []);
 
     return (
